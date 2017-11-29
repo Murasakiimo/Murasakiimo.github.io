@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    var now = new Date();
+    console.log(now);
+    var year = now.getFullYear();
+    console.log(year);
+    var month = now.getMonth();
+    console.log(month);
+    var day = now.getDay();
+    console.log(day);
+    var hours = now.getHours();
+    console.log(hours);
+    var minutes = now.getMinutes();
+    console.log(minutes);
+    var seconds = now.getSeconds();
+    console.log(seconds);
+    var milliseconds = now.getMilliseconds();
+    console.log(milliseconds);
+
+    console.log("-----------------------------");
+
+    var date1 = new Date();　//　初期化
+    console.log(date1.toString());
+    date1.setUTCFullYear(2019);
+    console.log(date1.toString());
+
+    var date2 = new Date(); //　初期化
+    date2.setFullYear(2020); //年
+    date2.setMonth(6); //月
+    date2.setDate(24); //日
+    console.log(date2.toString()); //オリンピックの日付
+    console.log(date2.getTime()); //オリンピックの時間
+    console.log(now.getTime()); //今の時間
+
+    var diff = date2.getTime() - now.getTime();
+    console.log(diff);
+
+    diff = diff/(1000*60*60*24);
+    diff = Math.floor(diff); //小数点以下切り捨て
+    console.log(diff);
+  </script>
+</body>
+</html>

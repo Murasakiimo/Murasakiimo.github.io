@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      diff{
+          font-size: 60px;
+      }
+
+    </style>
+</head>
+<body>
+    <center>
+    <p>私の誕生日は7月2日です🎂</p>
+    <p>次の私の誕生日まで<br>あと <p id="diff">diff</p>  です！🎉</p>
+    </center>
+    
+    <script>
+       var date1 = new Date(); //今の日付
+       var date2 = new Date(2018, 6, 2);　//次の自分の誕生日
+       var diff = (date2.getTime() - date1.getTime()) / (1000*60*60*24);　
+       diff = Math.ceil(diff);
+       document.getElementById('diff').textContent=diff;
+
+    </script>
+</body>
+</html>
