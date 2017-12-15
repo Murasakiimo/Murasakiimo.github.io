@@ -9,7 +9,12 @@
         h1{
             color: palevioletred;
         }
-        
+        body{
+            background-color: rgba(0,0,0, 0.2)
+        }
+        h2{
+            font-size: 30px
+        }
     </style>
 </head>
 <body>
@@ -27,11 +32,39 @@
     <br>
     <br>
     <img src="parallax_octocat.png" width="200px">
-    <h2>オクトキャット<br>-フォースの覚醒-</h2>
+    <h3>オクトキャット<br>-フォースの覚醒-</h3>
     <div id="tt">
-            <h2>🐱Gitの使い方！</h2>
-            <p>Gitとは、それぞれの作ったプログラムソースなどの変更履歴を管理することができるシステムです！</p>
-            <p>特徴としては、ローカル環境(自分のPC内)にもコードの変更履歴を保存することができ、<br>個々のローカル環境がリポジトリのサーバーになることが可能になります！<br>それにより、ネットワークに接続していなくても作業をすることができます！</p>
+            
+        
+        <h2>🐱Githubの使い方</h2>
+            
+            <h3>リポジトリ作成</h3>
+                <p>アカウントに登録後、"New Repository"を選択します。
+                    <br>Repository name"の部分に好きな名前でリポジトリを作成します。
+                    <br>"Description"の部分にコメントを残します。</p>
+                    <img src="キャ.PNG"　width="500px" height="350px">
+                <p>リポジトリの中にあらかじめREADMEファイルを作成しておく場合は、
+                    <br>「Initialize this repository with a README」にチェックします！
+                    <br>リモートリポジトリのアドレスはアップロード時に使うので、控えておいてください！</p>
+            
+            <h3>ファイルを作成・編集してアップロード！</h3>
+                <p>ローカルのPCにリポジトリを作成し、本ページ下記の"コマンド一覧表"を見ながらアップロードしていきます！</p>
+
+            <h2>🐱Github-pagesの作り方</h2>
+                <p>Repository nameに[ GitHubアカウント名 ].github.io と入力します！
+                    <br>緑の"Create repository"をクリック</p>
+            <h3>ローカル作業</h3>
+                <p>ターミナルを起動し、下記を実行して下さい。
+                    <br>"git clone https://github.com/ [GitHubアカウント名]/[GitHubアカウント名].github.io"
+                    <br>
+                    <br>実行することでローカルにファイルが生成されています。
+                    <br>ファイル名：[GitHubアカウント名].github.io
+                    <br>
+                    <br>実行の指定先を移動します。
+                    <br> cd [GitHubアカウント名].github.io</p>
+                    <br>Htmlファイルを作り、GithubへPushしたら
+                    <h3>完了です！</h3>
+
             <h2>💻コマンド一覧表💻</h2>
             <table border="1" >
                 <tr>
@@ -39,32 +72,76 @@
                     <th>説明</th>
                 </tr>
                 <tr>
-                    <td>ssh -T git@github.com</td>
-                    <td>Githubと連結ができているかの確認コード</td>
+                    <td>git init</td>
+                    <td>初期化、Gitリポジトリを新たに作成するコマンドです！</td>
                 </tr>
                 <tr>
-                    <td>git init</td>
-                    <td>リポジトリを作成する。</td>
+                    <td>git add ファイル名</td>
+                    <td>インデックス領域にあげる</td>
+                </tr>
+                <tr>
+                    <td>git add .</td>
+                    <td>インデックス領域に変更ファイルすべてをあげる</td>
+                </tr>
+                <tr>
+                    <td>git commit</td>
+                    <td>インデックス領域にあるファイルをコミット</td>
+                </tr>
+                <tr>
+                    <td>git commit -m ”コメント”</td>
+                    <td>Commitのコメント簡易版</td>
                 </tr>
                 <tr>
                     <td>git status</td>
                     <td>Gitの状態を表示させる。</td>
                 </tr>
                 <tr>
-                    <td>git add .</td>
-                    <td>ファイルをステージングする</td>
+                    <td>git log</td>
+                    <td>gitのログを見る</td>
                 </tr>
                 <tr>
-                    <td>git commit -m ~</td>
-                    <td>ファイルをコミットする</td>
+                    <td>git log –pretty short</td>
+                    <td>logの簡易表示版</td>
                 </tr>
                 <tr>
-                    <td>git remote add origin ~</td>
-                    <td>Githubと同期させる</td>
+                    <td>git diff</td>
+                    <td>変更箇所がわかる</td>
                 </tr>
                 <tr>
-                    <td>git push -u origin master</td>
-                    <td>ファイルをGithubにアップロードさせる</td>
+                    <td>git push</td>
+                    <td>Git Hubへあげる</td>
+                </tr>
+                <tr>
+                    <td>git pull</td>
+                    <td>Git Hubから落としてくる</td>
+                </tr>
+                <tr>
+                    <td>git branch ブランチ名</td>
+                    <td>ブランチの作成</td>
+                </tr>
+                <tr>
+                    <td>git checkout ブランチ名</td>
+                    <td>ブランチの移動</td>
+                </tr>
+                <tr>
+                    <td>git push -u origin</td>
+                    <td>Git Hubへブランチをあげる</td>
+                </tr>
+                <tr>
+                    <td>git branch -d ブランチ名</td>
+                    <td>ブランチの削除</td>
+                </tr>
+                <tr>
+                    <td>git branch</td>
+                    <td>現状のブランチを見る</td>
+                </tr>
+                <tr>
+                    <td>git merge –no-ff ブランチ名</td>
+                    <td>ブランチのマージ</td>
+                </tr>
+                <tr>
+                    <td>git log –graph</td>
+                    <td>ブランチの流れを可視化</td>
                 </tr>
             </table>
             </div>
