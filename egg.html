@@ -18,13 +18,20 @@
         <label for="isbn">好きな寿司ネタを選択！：
         </label>
         <select name="isbn" id="isbn">
-            <option value="">たまご</option>
-            <option value="samon">サーモン</option>
-            <option value="maguro">まぐろ</option>
+            <option value="egg.html">たまご</option>
+            <option value="samon.html">サーモン</option>
+            <option value="maguro.html">まぐろ</option>
         </select>
     </form>
     <h2>新鮮なたまご！</h2>
     <img src="c88930ab6505336e54f57ec7f7571e62.png" width="300px" height="250px"><img src="5e8b1_1405_8bc7a9dae3d834d447fd48779ec9795f.jpg" width="300px" height="250px">
     </center>
+    <script>
+            document.addEventListener('DOMContentLoaded',function() {
+                document.getElementById('isbn').addEventListener('change',function() {
+                    location.href = this.value; 
+                },false);
+            },false);
+        </script>
         </body>
 </html>
