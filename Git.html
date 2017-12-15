@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1{
+            color: palevioletred;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <h1>gitの使い方とgithub-pagesの作り方！</h1>
+    <form>
+        <label for="isbn">項目一覧：</label>
+        <select name="isbn" id="isbn">
+            <option value="Git.html">gitの使い方とgithub-pagesの作り方！</option>
+            <option value="maguro.html">まぐろ</option>
+            <option value="egg.html">たまご</option>
+            <option value="sarmon.html">サーモン</option>
+        </select>
+    </form>
+    <br>
+    <br>
+    <img src="parallax_octocat.png" width="200px">
+    <h2>オクトキャット<br>-フォースの覚醒-</h2>
+    <div id="tt">
+            <h2>🐱Gitの使い方！</h2>
+            <p>Gitとは、それぞれの作ったプログラムソースなどの変更履歴を管理することができるシステムです！</p>
+            <p>特徴としては、ローカル環境(自分のPC内)にもコードの変更履歴を保存することができ、<br>個々のローカル環境がリポジトリのサーバーになることが可能になります！<br>それにより、ネットワークに接続していなくても作業をすることができます！</p>
+            <h2>💻コマンド一覧表💻</h2>
+            <table border="1" >
+                <tr>
+                    <th>コンテンツ</th>
+                    <th>説明</th>
+                </tr>
+                <tr>
+                    <td>ssh -T git@github.com</td>
+                    <td>Githubと連結ができているかの確認コード</td>
+                </tr>
+                <tr>
+                    <td>git init</td>
+                    <td>リポジトリを作成する。</td>
+                </tr>
+                <tr>
+                    <td>git status</td>
+                    <td>Gitの状態を表示させる。</td>
+                </tr>
+                <tr>
+                    <td>git add .</td>
+                    <td>ファイルをステージングする</td>
+                </tr>
+                <tr>
+                    <td>git commit -m ~</td>
+                    <td>ファイルをコミットする</td>
+                </tr>
+                <tr>
+                    <td>git remote add origin ~</td>
+                    <td>Githubと同期させる</td>
+                </tr>
+                <tr>
+                    <td>git push -u origin master</td>
+                    <td>ファイルをGithubにアップロードさせる</td>
+                </tr>
+            </table>
+            </div>
+    </center>
+    <script>
+        document.addEventListener('DOMContentLoaded',function() {
+            document.getElementById('isbn').addEventListener('change',function() {
+                location.href = this.value; 
+                },false);
+            },false);
+    </script>
+        </body>
+</html>
