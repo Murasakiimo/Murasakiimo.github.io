@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Documentオブジェクトテスト用コード</title>
+<script>
+window.addEventListener("load", function(){
+
+    // 画像インデックス
+    var imageIndex = 0;
+
+    // リスナー登録
+    document.getElementsByTagName("button")[0].addEventListener("click", function(){
+        // 画像イメージをインクリメント
+        if (imageIndex < 6) {
+            imageIndex++;
+        } else {
+            imageIndex = 0;
+        }
+        // 画像srcを変更
+        switch(imageIndex) {
+            case 0:
+                imageSrc = "./img/images (1).jpg";
+                break;
+            case 1:
+                imageSrc = "./img/images (2).jpg";
+                break;
+            case 2:
+                imageSrc = "./img/images (3).jpg";
+                break;
+            case 3:
+                imageSrc = "./img/images (4).jpg";
+                break;
+            case 4:
+                imageSrc = "./img/images (5).jpg";
+                break;
+            case 5:
+                imageSrc = "./img/nt-13.jpg";
+                break;
+            case 6:
+                imageSrc = "./img/DHWA0C7XkAIB5iC.jpg";
+                break;
+        }
+        document.getElementById("image").src = imageSrc;
+
+    }, false);
+});
+</script>
+</head>
+    
+    <body>
+        <center>
+                <h1>Cat's🐈</h1>
+            <form>
+                <label for="isbn">項目を選択！：
+                </label>
+                <select name="isbn" id="isbn">
+                    <option value="images.html">可愛いネコたち</option>
+                    <option value="maguro.html">まぐろ</option>
+                    <option value="egg.html">たまご</option>
+                    <option value="sarmon.html">サーモン</option>
+                    <option value="Git.html">gitの使い方とgithub-pagesの作り方！</option>
+                </select>
+            </form>
+            <br>
+            <h3>癒しの時間をお届けします(*´ω｀*)</h3>
+            <p><img id ="image" src="./img/flower.jpg" alt="ネコ" width="350px" height="300px"/></p>
+            <button>ここを猫パンチ！🐾</button>
+        </center>
+    </body>
+</html>
