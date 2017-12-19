@@ -12,7 +12,7 @@ window.addEventListener("load", function(){
     // リスナー登録
     document.getElementsByTagName("button")[0].addEventListener("click", function(){
         // 画像イメージをインクリメント
-        if (imageIndex < 5) {
+        if (imageIndex < 4) {
             imageIndex++;
         } else {
             imageIndex = 0;
@@ -20,22 +20,16 @@ window.addEventListener("load", function(){
         // 画像srcを変更
         switch(imageIndex) {
             case 0:
-                imageSrc = "./img/images (1).jpg";
+                imageSrc = "./img/IMG_1134.JPG";
                 break;
             case 1:
-                imageSrc = "./img/images (2).jpg";
+                imageSrc = "./img/IMG_1475.JPG";
                 break;
             case 2:
-                imageSrc = "./img/images (3).jpg";
+                imageSrc = "./img/IMG_4189.JPG";
                 break;
             case 3:
-                imageSrc = "./img/images (4).jpg";
-                break;
-            case 4:
-                imageSrc = "./img/images (5).jpg";
-                break;
-            case 5:
-                imageSrc = "./img/nt-13.jpg";
+                imageSrc = "./img/IMG_4479.JPG";
                 break;
         }
         document.getElementById("image").src = imageSrc;
