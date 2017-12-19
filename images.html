@@ -12,7 +12,7 @@ window.addEventListener("load", function(){
     // リスナー登録
     document.getElementsByTagName("button")[0].addEventListener("click", function(){
         // 画像イメージをインクリメント
-        if (imageIndex < 6) {
+        if (imageIndex < 5) {
             imageIndex++;
         } else {
             imageIndex = 0;
@@ -36,9 +36,6 @@ window.addEventListener("load", function(){
                 break;
             case 5:
                 imageSrc = "./img/nt-13.jpg";
-                break;
-            case 6:
-                imageSrc = "./img/DHWA0C7XkAIB5iC.jpg";
                 break;
         }
         document.getElementById("image").src = imageSrc;
