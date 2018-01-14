@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ブラウザの判定</title>
+  <style>
+        h1{
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>～　ブラウザの.Ver確認　～</h1>
+  <form>
+    <label for="isbn">項目を選択！：</label>
+    <select name="isbn" id="isbn">
+        <option value="">--選択して下さい--</option>
+        <option value="maguro.html">まぐろ</option>
+        <option value="sarmon.html">サーモン</option>
+        <option value="egg.html">たまご</option>
+        <option value="Git.html">gitの使い方とgithub-pagesの作り方！</option>
+        <option value="images.html">可愛いネコたち</option>
+        <option value="method.html">各メソッドの使い方</option>
+        <option value="console.html">色々なコンソール紹介</option>
+        <option value="tokei.html">タイマー</option>
+    </select>
+  </form>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('isbn').addEventListener('change', function () {
+                location.href = "https://seiyaonuma.GitHub.io/" + this.value;
+            }, false);
+        }, false);
+  </script>
+
+<script>
+    function browser_name() {
+      var userAgent = window.navigator.userAgent.toLowerCase();
+      var appVersion = window.navigator.appVersion.toLowerCase();
+
+      if (userAgent.indexOf("msie") > -1) {
+        if (appVersion.indexOf("msie 6.0") > -1) {
+          alert("IE6");
+        }
+        else if (appVersion.indexOf("msie 7.0") > -1) {
+          alert("IE7");
+        }
+        else if (appVersion.indexOf("msie 8.0") > -1) {
+          alert("IE8");
+        }
+        else if (appVersion.indexOf("msie 9.0") > -1) {
+          alert("IE9");
+        }
+        else if (appVersion.indexOf("msie 10.0") > -1) {
+          alert("IE10");
+        }
+        else{
+          alert("もう一度確認下さい")
+        }
+    }
+    else if (userAgent.indexOf("edge") > -1) {
+          alert("Edge");
+        }
+        else if (userAgent.indexOf("firefox") > -1) {
+          alert("Firefox");
+        }
+        else if (userAgent.indexOf("opera") > -1) {
+          alert("Opera");
+        }
+        else if (userAgent.indexOf("chrome") > -1) {
+          alert("Google Chrome");
+        }
+        else {
+          alert("もう一度ご確認下さい")
+        }
+    }
+  </script>
+  <br>
+  <br>
+  <p>ブラウザの確認をする場合はここをボタンをクリック！</p><br>
+  <input type="button" value="ブラウザを確認！！" onclick="browser_name();">
+<center>
+</body>
+</html>
