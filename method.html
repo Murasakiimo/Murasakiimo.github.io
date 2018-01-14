@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Windowシリーズ</title>
+  <style>
+    #aa{
+        font-size: 50px;
+    }
+
+    #main {
+      width: 850px;
+      margin-left: 200px;
+      padding-left: 30px;
+    }
+
+    h1 {
+        border-bottom: solid 3px skyblue;
+        position: relative;
+    }
+
+    h1:after {
+        position: absolute;
+        content: " ";
+        display: block;
+        border-bottom: solid 3px #ffc778;
+        bottom: -3px;
+        width: 30%;
+    }
+
+    h2 {
+        padding: 0.5em;/*文字周りの余白*/
+        color: #494949;/*文字色*/
+        background: #fffaf4;/*背景色*/
+        border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+    }
+
+    #sample {
+        padding: 0.5em 1em;
+        margin: 2em 0;
+        border: double 5px #4ec4d3;
+    }
+    #sample p {
+        margin: 0; 
+        padding: 0;
+    }
+
+  </style>
+</head>
+
+<body>
+        <center>
+  <p id="aa">～　windows.open(), close(), focus()の説明　～</p>
+  <p>window オブジェクトは、Web ブラウザ環境で JavaScript を実行する際のグローバルオブジェクトです。<br>ここでは、” windows.open(), close(), focus() ”それぞれの説明と使い方を教えます！</p>
+    <form>
+        <label for="isbn">項目を選択！：</label>
+            <select name="isbn" id="isbn">
+                <option value="">--選択して下さい--</option>
+                <option value="maguro.html">まぐろ</option>
+                <option value="sarmon.html">サーモン</option>
+                <option value="egg.html">たまご</option>
+                <option value="Git.html">gitの使い方とgithub-pagesの作り方！</option>
+                <option value="images.html">可愛いネコたち</option>
+                <option value="method.html">Windowsメソッドの使い方</option>
+                <option value="console.html">コンソール紹介</option>
+                <option value="tokei.html">タイマー</option>
+            </select>
+    </form>
+    </center>
+  
+  <div id="main">
+    <br>
+
+    <h1>window.open()</h1>
+    <p>いわゆる小窓です。<br>
+        JavaScriptを用いて現在開いているページから、リンク先を小窓となる新しいウィンドウで開きます。<br>
+        指定の仕方はこうです！</p>
+    <div id="sample">
+        <p>例：　window.open('http://www.google.com', mywindow1, 'width=200, height=200')</p>
+    </div>
+    <p>第１引数には、リンク先のURLをクォーテーション（' '）で括って指定します。<br><br>
+        第２引数には、新しく開くウィンドウの名前をクォーテーション（' '）で括って指定します。<br>
+        特に指定する必要がない場合は null を指定します。
+        複数の新しいウィンドウを開く場合に、同一のウィンドウ名を指定することで、
+        不必要に複数のウィンドウが開かないようにすることができます。
+        ウィンドウ名は任意の名前を指定することができます。<br><br>
+        第３引数には、新しく開くウィンドウのサイズなどのオプションを指定します。<br>
+        複数のオプションを指定する際にはカンマで区切り、全体をクォーテーションで囲みます。</p>
+
+    <h1>window.close() </h1>
+    <p>その名の通り、ウィンドウを閉じます。<br>
+        指定の仕方はこうです！</p>
+    <div id="sample">
+        <p>　window.open('about:blank','_self').close();</p>
+    </div>
+      <p>開いているウィンドウを閉じようとしたときに、”Window.close();”だけだと
+          セキュリティポリシの関係で大体禁止されているので閉じられません。上記のように
+          すると閉じるようですが、Firefoxでは空タブが残ってしまう現象が起こっています。
+      </p>
+      <h1 id="no3">window.focus() </h1>
+      <p>新しく開いたウィンドウにフォーカスを当て前面に表示させます。<br>
+        　指定の仕方はこうです！</p>
+      <div id="sample">
+            <p>　window.focus();</p>
+        </div>
+        <p></p>
+        
+    <p>以上で本ページは終了になります。閲覧ありがとうございました(^^)/</p>
+    <br>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('isbn').addEventListener('change', function () {
+        location.href = "https://nakamurayuchesnaughtsceptile.github.io/" + this.value;
+      }, false);
+    }, false);
+  </script>
+</body>
+</html>
