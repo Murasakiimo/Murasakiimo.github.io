@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Windowシリーズ</title>
+  <style>
+    #aa{
+        font-size: 50px;
+    }
+
+    #main {
+      width: 850px;
+      margin-left: 200px;
+      padding-left: 30px;
+    }
+
+    h1 {
+        border-bottom: solid 3px skyblue;
+        position: relative;
+    }
+
+    h1:after {
+        position: absolute;
+        content: " ";
+        display: block;
+        border-bottom: solid 3px #ffc778;
+        bottom: -3px;
+        width: 30%;
+    }
+
+    h2 {
+        padding: 0.2em;/*文字周りの余白*/
+        color: #494949;/*文字色*/
+        background: #fffaf4;/*背景色*/
+        border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+    }
+
+    #sample {
+        padding: 0.5em 1em;
+        margin: 2em 0;
+        border: double 5px #4ec4d3;
+    }
+    #sample p {
+        margin: 0; 
+        padding: 0;
+    }
+
+  </style>
+</head>
+
+<body>
+        <center>
+  <p id="aa">～　consoleオブジェクトについて　～</p>
+  <p>consoleオブジェクトは、各ブラウザに実装されているWebページの動作確認に用いられるコンソールに<br>
+    アクセスして様々なアプローチをかけることを言います。<br></p>
+    <form>
+        <label for="isbn">項目を選択！：</label>
+            <select name="isbn" id="isbn">
+                <option value="">--選択して下さい--</option>
+                <option value="maguro.html">まぐろ</option>
+                <option value="sarmon.html">サーモン</option>
+                <option value="egg.html">たまご</option>
+                <option value="Git.html">gitの使い方とgithub-pagesの作り方！</option>
+                <option value="images.html">可愛いネコたち</option>
+                <option value="browser.html">ブラウザの判定</option>
+                <option value="method.html">Windowsメソッドの使い方</option>
+                <option value="time.html">タイマー</option>
+            </select>
+    </form>
+    </center>
+  
+  <div id="main">
+    <br>
+
+    <h1>consoleオブジェクトは種類が多い</h1>
+    <p>私たちが今まで学んできたconsoleオブジェクトのメソッドの一つが"log"です！
+        しかし、consoleオブジェクトについて調べていくと他にも１８もメソッドがあることを知りました。<br>
+        これらのメソッドについて少し説明していきます！</p>
+    
+    <h2>Console.assert()</h2>
+    <p>第 1 引数が false であれば、メッセージとスタックトレースをコンソールに記録します。</p>
+
+    <h2>Console.clear()</h2>
+    <p>コンソールをクリアします。</p>
+    
+    <h2>Console.count()</h2>
+    <p>行が呼び出された回数および指定したラベルを記録します。</p>
+    
+    <h2>Console.debug()</h2>
+    <p>log() の別名です。</p>
+
+    <h2>Console.dir()</h2>
+    <p>指定した JavaScript オブジェクトのプロパティの、対話型リストを表示します。このリスト内の三角印をクリックすると、子オブジェクトの内容を調査して表示させることができます。</p>
+
+    <h2>Console.dirxml()</h2>
+    <p>指定したオブジェクトを XML/HTML 要素で表現したものを表示します。表現できない場合は、JavaScript オブジェクトビューを表示します。</p>
+
+    <h2>Console.error()</h2>
+    <p>エラーメッセージを出力します。このメソッドでは、文字列置換および追加の引数を使用することができます。</p>
+
+    <h2>Console.group()</h2>
+    <p>以降の出力を別のレベルにインデントする、新たなインライングループを作成します。レベルを戻すには、groupEnd() を呼び出します。</p>
+
+    <h2>Console.groupCollapsed()</h2>
+    <p>以降の出力を別のレベルにインデントする、新たなインライングループを作成します。group() との違いは、グループが折りたたまれた状態で作られ、それを開くには展開ボタンを操作する必要があることです。レベルを戻すには、groupEnd() を呼び出します。</p>
+
+    <h2>Console.groupEnd()</h2>
+    <p>メッセージタイプのログ情報を出力します。このメソッドでは、文字列置換および追加の引数を使用することができます。</p>
+
+    <h2>Console.profile()</h2>
+    <p>ブラウザ内蔵のプロファイラ (例えば Firefox のパフォーマンスツール) を開始します。プロファイルの名称を指定することができます。</p>
+
+    <h2>Console.profileEnd()</h2>
+    <p>プロファイラを停止します。結果のプロファイルは、ブラウザのパフォーマンスツール (例えば Firefox のパフォーマンスツール) で確認できます。</p>
+
+    <h2>Console.table()</h2>
+    <p>表形式のデータを、テーブルを使用して表示します。</p>
+
+    <h2>Console.time()</h2>
+    <p>入力パラメータとして指定された名前のタイマーを開始します。ページあたり最大 10,000 個のタイマーを同時に動かすことができます。</p>
+
+    <h2>Console.timeEnd()</h2>
+    <p>指定されたタイマーを停止して、そのタイマーを開始してからの時間を秒単位でログに出力します。</p>
+
+    <h2>Console.timeStamp()</h2>
+    <p>ブラウザの Timeline やタイムラインツールにマーカーを追加します。</p>
+
+    <h2>Console.trace()</h2>
+    <p>スタックトレースを出力します。</p>
+
+    <h2>Console.warn()</h2>
+    <p>警告メッセージを出力します。このメソッドでは、文字列置換および追加の引数を使用することができます。</p>
+    
+    <h1>使用方法について</h1>
+    <p>console でもっとも頻繁に使用される機能は、テキストやその他のデータをログ出力することです。
+        生成することができる出力のカテゴリは 4 つあり、console.log()、console.info()、console.warn()、console.error() の各メソッドを使用します。
+        これらメソッドの出力結果はログ上でそれぞれ異なるスタイルがつけられ、また関心がある種類の出力だけを参照するためにブラウザが提供するフィルタ機能を使用することもできます。</p>
+    <br><br>
+    <p>各出力メソッドを使用する方法は 2 つあります。
+        複数の文字列表現を 1 つの文字列に連結してコンソールに出力する形でオブジェクトのリストを渡す方法と、
+        オブジェクトのリストに続けてそれらを置き換える任意の個数の置換文字列を渡す方法です。</p>
+    
+    <h2>単一のオブジェクトを出力する</h2>
+    <p>もっとも簡単にログを記録する方法は、単一のオブジェクトを出力することです:</p>
+    <p id="sample">var someObject = { str: "Some text", id: 5 };
+            <br>console.log(someObject);</p>
+    <p>出力内容は以下のようになります:</p>
+    <p id="sample">[09:27:13.475] ({str:"Some text", id:5})</p>
+
+    <h2>複数のオブジェクトを出力する</h2>
+    <p>ログ出力のメソッドを呼び出すときにオブジェクトを羅列することで、複数のオブジェクトを出力することもできます:</p>
+    <p id="sample">var car = "Dodge Charger";<br>
+            var someObject = {str:"Some text", id:5}; <br>
+            console.info("My first car was a", car, ". The object is: ", someObject);</p>
+    <p>出力は以下のようになります:</p>
+    <p id="sample">[09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})</p>
+
+    <h1>終わりに</h1>
+    <p>以上で本ページは終了になります。<br>
+        もし今回掲載させていただいた情報に誤りがございましたら教えていただきたいです！<br>
+        最後まで閲覧ありがとうございました(^^)/</p>
+    <br>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('isbn').addEventListener('change', function () {
+        location.href = this.value;
+      }, false);
+    }, false);
+  </script>
+</body>
+</html>
