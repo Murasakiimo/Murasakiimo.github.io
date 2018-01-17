@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>巻末問題</h1>
+    <form>
+            <label for="isbn">項目を選択！：</label>
+            <select name="isbn" id="isbn">
+                <option value="">--選択して下さい--</option>
+                <option value="maguro.html">まぐろ</option>
+                <option value="sarmon.html">サーモン</option>
+                <option value="egg.html">たまご</option>
+                <option value="images.html">可愛いネコたち</option>
+                <option value="browser.html">ブラウザの判定</option>
+                <option value="method.html">Windowsメソッドの使い方</option>
+                <option value="console.html">Consoleオブジェクト</option>
+                <option value="time.html">タイマー</option>
+            </select>
+    </form>
+    <br>
+    <h2>【問題】</h2>
+    <p>100から0まで<br>5単位で区切られた選択肢を作成せよ</p>
+    <form action="">
+        <label for="kazu">個数：</label>
+        <select name="kazu" id="kazu">
+        </select>
+    </form>
+    <br>
+    <p>できました～！</p>
+
+    <script>
+        var p = document.getElementById("kazu");
+
+        for(var i=100; i>=0; i=i-5){
+            var option = document.createElement("option");
+            option.innerHTML = i;
+            p.appendChild(option);
+        }
+
+        document.addEventListener('DOMContentLoaded',function() {
+            document.getElementById('isbn').addEventListener('change',function() {
+                location.href = this.value; 
+                },false);
+            },false);
+    </script>
+</body>
+</html>
