@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>中華料理屋「た な か」</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+</head>
+
+<body>
+<center>
+    <header>
+        <img src="img/mokumoku.png" alt="雲">
+    </header>
+
+    <h1>中華料理屋「た な か」</h1>
+    <h3>🍜注文する品をお選びください</h3>
+
+    <form name="Sample3_form" action="ramen.html">
+        <input type="radio" name="radio" value="蒙古ラーメン">蒙古ラーメン
+        <input type="radio" name="radio" value="一楽ラーメン">一楽ラーメン
+        <input type="radio" name="radio" value="節骨ラーメン">節骨ラーメン
+
+    <h3>🍜サイドメニューです！お好きなものをお選びください</h3>
+        <input type="checkbox" name="check" id="mori">大盛
+        <input type="checkbox" name="check" id="niku">チャーシュー飯
+        <input type="checkbox" name="check" id="han">半チャーハン
+        <input type="checkbox" name="check" id="gyou">餃子
+    </form>
+
+    <br><br>
+    <input type="submit" value="注文する" onclick="Sample3()" class="button1">
+
+    <br><br><br>
+    <div>
+        <img src="img/mokumoku.png" alt="雲">
+    </div>
+    <footer>
+        <p>中華料理「たなか」： 連絡先　himeko8bblove@gmail.com</p>
+    </footer>
+</center>
+
+</center>
+</body>
+
+<script>
+    function Sample3() {
+            for (var i = 0; i < Sample3_form.radio.length; i++) {
+                if (Sample3_form.radio[i].checked == true) {
+                    
+                    var get = Sample3_form.radio[i].value;
+                    var get1 = Sample3_form.check[0].checked;
+                    var get2 = Sample3_form.check[1].checked;
+                    var get3 = Sample3_form.check[2].checked;
+                    var get4 = Sample3_form.check[3].checked;
+
+                    var menu1 = "";
+
+                    if (get1 == true) {
+                        menu1 = menu1 + '大盛り';
+                    }else if (get2 == true) {
+                        menu1 = menu1 + 'チャーシュー飯';
+                    }else if (get3 == true) {
+                        menu1 = menu1 + '半チャーハン';
+                    }else if (get4 == true) {
+                        menu1 = menu1 + '餃子';
+                    }
+
+                    alert("注文は" + get + "  ＋  " + menu1 + "ですね？");
+                    document.cookie = document.cookie + get + menu1 + ";max-age=180;path=/";
+                }
+            }
+        
+    }
+</script>
