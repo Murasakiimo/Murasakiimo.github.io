@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>中華料理屋「た な か」</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 </head>
 
@@ -47,6 +48,7 @@
 
 <script>
     function Sample3() {
+        if(document.cookie == ""){
             for (var i = 0; i < Sample3_form.radio.length; i++) {
                 if (Sample3_form.radio[i].checked == true) {
                     
@@ -70,8 +72,14 @@
 
                     alert("注文は" + get + "  ＋  " + menu1 + "ですね？");
                     document.cookie = document.cookie + get + menu1 + ";max-age=180;path=/";
+
+                    setTimeout(function () {
+                        alert("ヘイお待ち! うちの特製" + get + "  ＋  " + menu1 + "だよ！");
+                    }, 120000);
                 }
             }
-        
+        }else{
+            alert("お客様は注文済みです。" + "\n" + document.cookie + "\n" + "しばらくお待ちください。");
+        }
     }
 </script>

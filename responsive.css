@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+@media screen and (max-width: 450px) {
+    body {
+      min-width: 300px;
+    }
+  }
+  
+/* 参照サイト　https://syncer.jp/how-to-create-responsive-web-design */
