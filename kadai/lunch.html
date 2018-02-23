@@ -72,6 +72,10 @@
 
                     alert("注文は" + get + "  ＋  " + menu1 + "ですね？");
                     document.cookie = document.cookie + get + menu1 + ";max-age=180;path=/";
+
+                    setTimeout(function () {
+                        alert("ヘイお待ち! うちの特製" + get + "  ＋  " + menu1 + "だよ！");
+                    }, 120000);
                 }
             }
         }else{
