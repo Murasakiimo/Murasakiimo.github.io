@@ -48,6 +48,7 @@
 
 <script>
     function Sample3() {
+        if(document.cookie == ""){
             for (var i = 0; i < Sample3_form.radio.length; i++) {
                 if (Sample3_form.radio[i].checked == true) {
                     
@@ -73,5 +74,8 @@
                     document.cookie = document.cookie + get + menu1 + ";max-age=180;path=/";
                 }
             }
+        }else{
+              alert("お客様は注文済みです。" + "\n" + document.cookie + "\n" + "しばらくお待ちください。");
+        }
     }
 </script>
