@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="Jstyle.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="shortcut icon" href="img/icon2.ico" type="image/x-icon">
+</head>
+
+<body data-100="background:rgb(255,255,255);"
+ data-1000="background:rgb(255,215,0);"
+ data-2000="background:rgb(255,99,71);"
+ data-3000="background:rgb(255,20,147);">
+    
+    <center>
+        <p id="aa">　jQuery selected by Himeko　</p>
+        <p>私が調査したjQueryを３つ皆さんに紹介したいと思います！</p>
+        <a href="https://www.webcreatorbox.com/tech/jquery-tips20">参考サイト</a>
+    </center>
+
+    <div id="main"><br>
+        <h1>１．スライドパネル</h1>
+        <center>
+        <p class="open">ここを押すと...？</p>
+        </center>
+        <div id="slideBox">
+            文字が出てきます！もう一度ボタンをクリックすると閉じます。<br>
+            授業でやったjQueryの基本１の応用的なものになっています。
+        </div>
+
+        <h1>２．ツールチップ</h1>
+            <ul class="tooltip">
+                <li>
+                  <a href="">Webサイト</a>       
+                  <span>お勧めのWebページへのリンクです！</span>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/himeko99">Facebook</a>
+                  <span>Facebookアカウントです！</span>
+                </li>
+                <li>
+                  <a href="https://twitter.com/hime_satumaimo">Twitter</a>
+                  <span>Twitterでは趣味についてなどつぶやいています。
+                  </span>
+                </li>
+            </ul>
+            <br>
+            <br>
+
+        <h1>３．ググっとスクロールしてみてください！</h1>
+
+        <p class="toTop">ページトップへ</p>
+
+        
+</div>
+
+</body>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
+<script>
+// スライドパネル
+$(function(){
+    $(".open").click(function(){
+        $("#slideBox").slideToggle("slow");
+    });
+});
+
+// ツールチップ
+$(function(){
+  $(".tooltip a").hover(function() {
+    $(this).next("span").animate({opacity: "show", top: "-75"}, "slow");}, function() {
+      $(this).next("span").animate({opacity: "hide", top: "-85"}, "fast");
+    });
+});
+
+// スクロール
+$(function() {
+    skrollr.init();
+});
+
+// トップへ戻る
+$(function(){
+  $('.toTop').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 800);
+    return false;
+  });
+});
+</script>
+</html>

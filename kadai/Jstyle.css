@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/* 基本的なレイアウト */
+#aa{
+    font-size: 50px;
+    color: gold;
+}
+
+#main {
+  width: 850px;
+  margin-left: 200px;
+  padding-left: 30px;
+}
+
+h1 {
+    border-bottom: solid 3px skyblue;
+    position: relative;
+}
+
+h1:after {
+    position: absolute;
+    content: " ";
+    display: block;
+    border-bottom: solid 3px #ffc778;
+    bottom: -3px;
+    width: 30%;
+}
+
+h2 {
+    padding: 0.5em;/*文字周りの余白*/
+    color: #494949;/*文字色*/
+    background: #fffaf4;/*背景色*/
+    border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+}
+
+p{
+    font-size: 20px;
+}
+
+
+/* スライドパネル ↓ */
+
+.open{
+    background: #fa2;
+    color: #fff;
+    cursor: pointer;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+  }
+  #slideBox{
+    padding: 10px; 
+    border: 1px #ccc solid;
+    display: none;
+    text-align: center;
+  }
+  body {
+    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,"メイリオ",Helvetica,Sans-Serif;
+  }
+
+/* スライドパネル ↑ */
+
+/* ツールチップ ↓ */
+.tooltip {
+    margin: 100px 0 0;
+    list-style: none;
+  }
+  .tooltip li {
+    margin: 0 30px;
+    float: left;
+    position: relative;
+    text-align: center;
+  }
+  .tooltip a {
+    padding: 14px 10px;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    width: 180px;
+  }
+  .tooltip li span {
+    background: #ffc;
+    border: 1px solid #fc6;
+    height: 45px;
+    position: absolute;
+    top: -85px;
+    left: 0;
+    text-align: center;
+    padding: 20px 12px 10px;
+    z-index: 2;
+    display: none;
+  }
+  body {
+    font-size: 14px;
+    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,"メイリオ",Helvetica,Sans-Serif;
+  }
+/* ツールチップ ↑ */
+
+/* トップへ戻る */
+.toTop {
+    margin-top: 3000px;
+    display: inline-block;
+    background: #0bd;
+    padding: 15px;
+    color: #fff;
+    cursor: pointer;
+  }
