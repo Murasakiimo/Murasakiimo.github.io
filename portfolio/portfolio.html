@@ -10,6 +10,29 @@
     <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var topBtn = $('.pagetop');    
+            topBtn.hide();
+            //スクロールが100に達したらボタン表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                //ボタンの表示方法
+                    topBtn.fadeIn();
+                } else {
+                //ボタンの非表示方法
+                    topBtn.fadeOut();
+                }
+            });
+            //スクロールしてトップ
+            topBtn.click(function () {
+                $('body,  html').animate({
+                    scrollTop: 0
+                },   500);
+                return false;
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- ヘッダー＆ナビゲーション -->
@@ -178,28 +201,6 @@
     </footer>
 
 
-    <script>
-        $(function() {
-            var topBtn = $('.pagetop');    
-            topBtn.hide();
-            //スクロールが100に達したらボタン表示
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                //ボタンの表示方法
-                    topBtn.fadeIn();
-                } else {
-                //ボタンの非表示方法
-                    topBtn.fadeOut();
-                }
-            });
-            //スクロールしてトップ
-            topBtn.click(function () {
-                $('body,  html').animate({
-                    scrollTop: 0
-                },   500);
-                return false;
-            });
-        });
-    </script>
+
 </body>
 </html>
