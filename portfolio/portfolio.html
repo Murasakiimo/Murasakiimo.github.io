@@ -15,17 +15,17 @@
         $(document).ready(function() {
             var pagetop = $('#pagetop');
             $(window).scroll(function () {
-            if ($(this).scrollTop() > 840){
-                pagetop.fadeIn(500);
-            } else {
-                pagetop.fadeOut(500);
-            }
+                if ($(this).scrollTop() >! 840){
+                    pagetop.fadeIn(500);
+                } else {
+                    pagetop.fadeOut(500);
+                }
+            });
+            pagetop.click(function () {
+                $('body, html').animate({ scrollTop: 900 }, 500);
+                return false;
+            });
         });
-        pagetop.click(function () {
-            $('body, html').animate({ scrollTop: 900 }, 500);
-            return false;
-        });
-    });
     </script>
 </head>
 <body>
@@ -181,7 +181,7 @@
         </section>
     </main>
     <!-- フッター -->
-    <p class="pagetop"><a href="#icon"><img src="img/pagetop.png" alt="PAGE TOP" /></a></p>
+    <p id="pagetop"><a href="#icon"><img src="img/pagetop.png" alt="PAGE TOP" /></a></p>
     <footer>
         <h2 id=apple><img src="img/icon.png" alt="リンゴアイコン"></h2>
         <ul>
