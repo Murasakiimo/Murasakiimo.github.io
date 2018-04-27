@@ -9,31 +9,23 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
     </script>
     <script>
-        $(function() {
-            var topBtn = $('.pagetop');    
-            topBtn.hide();
-            //スクロールが100に達したらボタン表示
+        $(document).ready(function() {
+            var pagetop = $('#pagetop');
             $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                //ボタンの表示方法
-                    topBtn.fadeIn();
-                } else {
-                //ボタンの非表示方法
-                    topBtn.fadeOut();
-                }
-            });
-            //スクロールしてトップ
-            topBtn.click(function () {
-                $('body,  html').animate({
-                    scrollTop: 0
-                },   500);
-                return false;
-            });
+            if ($(this).scrollTop() > 840){
+                pagetop.fadeIn(500);
+            } else {
+                pagetop.fadeOut(500);
+            }
         });
+        pagetop.click(function () {
+            $('body, html').animate({ scrollTop: 900 }, 500);
+            return false;
+        });
+    });
     </script>
 </head>
 <body>
@@ -47,7 +39,7 @@
                     <li id="navi3"><a href="#work">work</a></li>
                     <li id="navi4"><a href="#contact">contact</a></li>
                 </ul>
-        </nav>
+            </nav>
     </header>
 
     <!-- メインのコンテンツ -->
