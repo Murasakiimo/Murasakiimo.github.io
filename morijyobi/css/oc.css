@@ -175,7 +175,7 @@
 	background:url(/img/bg_schedule_illust.png) no-repeat 0 44px;
 }
 
-.scheduleCont h2{
+h2{
 	text-align:center;
 	padding-top:58px;
 }
@@ -259,10 +259,12 @@
 	background:url(/img/bg_qa_illust.png) no-repeat 0 39px;
 	position:relative;
 }
-.qaCont h2{
+
+#QandAoc{
 	text-align:center;
 	padding-top:55px;
 }
+
 .qaCont dl{
 	background:#fff;
 	padding:7px 20px 15px;
