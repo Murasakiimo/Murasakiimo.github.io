@@ -310,20 +310,18 @@ address{
 	background-color: rgba(0,0,0,0.7);
 }
 
-#txt{
+#txtFV{
 	position: absolute;
 	width: 100%;
 	top: 136px;
-	left: 466px;
-}
-
-#txt h1{
-	font-size: 47px;
+	text-align: center;
+	font-size: 36px;
 	color: #ffffff;
 }
 
-#txt a{
-	font-size: 30px;
+
+#txtFV a{
+	font-size: 25px;
 	color: #ffffff;
 	background-color: #0054a7;
 	padding: 10px 45px;
@@ -503,3 +501,5 @@ div {
 	margin-top:4px;
 	text-decoration:underline;
 }
+
+
