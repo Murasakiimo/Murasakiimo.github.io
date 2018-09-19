@@ -11,102 +11,58 @@
     <link href="https://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
     </script>
-    <script>
-        $(document).ready(function() {
-            var pagetop = $('#pagetop');
-            $(window).scroll(function () {
-                if ($(this).scrollTop() >! 840){
-                    pagetop.fadeIn(500);
-                } else {
-                    pagetop.fadeOut(500);
-                }
-            });
-            pagetop.click(function () {
-                $('body, html').animate({ scrollTop: 0 }, 500);
-                return false;
-            });
-        });
-    </script>
 </head>
 <body>
     <!-- ヘッダー＆ナビゲーション -->
-    <header id="top">
-            <div id="icon"><img src="img/icon.png" width="35" height="35" alt="リンゴアイコン"></div>
+    <header>
+        <h2>Tanaka himeko</h2>
             <nav>
                 <ul>
-                    <li id="navi1"><a href="#profile">profile</a></li>
-                    <li id="navi2"><a href="#skill">skill</a></li>
-                    <li id="navi3"><a href="#work">work</a></li>
-                    <li id="navi4"><a href="#contact">contact</a></li>
+                    <li id="navi1"><a href="about.html">About</a></li>
+                    <li id="navi3"><a href="work.html">work</a></li>
+                    <li id="navi2"><a href="photo.html">photo</a></li>
                 </ul>
             </nav>
+            <!-- レスポンシブ―ナビ -->
+            <div class="base">
+                <div class="menu">
+                   <div class="icon">
+                      <div class="bar"></div>
+                   </div>
+                </div>
+                <div class="icons">
+                   <i class="fa fa-user" aria-hidden="true">about</i>
+                   <i class="fa fa-calendar-o" aria-hidden="true">work</i>
+                   <i class="fa fa-tachometer" aria-hidden="true">photo</i>
+                </div>
+                <div class="section">
+                   <div class="cover1">
+                      <div class="cover2">
+                         <a class="content" href="work.html"></a>
+                      </div>
+                   </div>
+                </div>
+                <a class="section-static top" href="about.html"></a>
+                <a class="section-static bottom" href="photo.html"></a>
+             </div>
+             <!-- レスポンシブ―ナビ -->
     </header>
 
     <!-- メインのコンテンツ -->
     <main>
         <div id="example">
-            <h1><img src="img/top.png" width="100%" alt="My PORTFOLIO"></h1>
-            <p>My PORTFOLIO</p>
+            <h1><img src="img/top.jpg" width="100%" height="auto" alt="My PORTFOLIO"></h1>
         </div>
-            <!-- プロフィール -->
-        <section id="profile">
-            <h2>Profile</h2>
+
+            <!-- アバウト -->
+        <section id="about">
+            <h2>About</h2>
             <div id="left1">
-                <img src="img/profile.png" width="300" height="300" style="border-radius: 50%" alt="本人の顔写真">
+                <img src="img/profile.png" >
             </div>
             <div id="right1">
                 <center>
-                    <p id="name1">Tanaka　Himeko</p>
-                    <p id="name2">田中　媛子</p>
-                    <table>
-                        <tr>
-                            <th>Date Birth :</th>
-                            <td>　1998. 07. 02</td>
-                        </tr>
-                        <tr>
-                            <th>Place Brith:</th>
-                            <td>　Aomori(青森県)</td>
-                        </tr>
-                    </table>
-                </center>
-                <p id="text">
-                    Webクリエイターのプロフェッショナルを目指して日々<br>
-                    勉強しています！学校では、HTML , CSS , JavaScript , PHP <br>
-                    の勉強をしています。授業外では、デザインカンプを<br>
-                    考えたり色々なサイトのデザインやソースを見たりし<br>
-                    て研究しています。<br>
-                    趣味は、韓国語の勉強・音楽を聞くことです。晴れた休<br>
-                    みの日はよく散歩に行き、おいしい飲食店や綺麗な風景<br>
-                    写真を撮っています。
-                </p>
-            </div>
-        </section>
-
-        <!-- スキル -->
-        <section id="skill">
-            <h2>Skill</h2>
-            <div id="web">
-                <p>web</p>
-                <figure class="contents">
-                    <img src="img/skill1.png" alt="HTML">
-                    <figcaption>サイトのコンテンツを構<br>成するための言語</figcaption>
-                </figure>
-                <figure class="contents">
-                    <img src="img/skill2.png" alt="CSS">
-                    <figcaption>サイトにデザインを指定<br>するための言語</figcaption>
-                </figure>
-                <figure class="contents">
-                    <img src="img/skill3.png" alt="CSS">
-                    <figcaption>サイトにアニメーション<br>効果をつける言語</figcaption>
-                </figure>
-            </div>
-            <div id="kentei">
-                <p>取得検定</p>
-                <ul>
-                    <li>Webクリエイター能力認定試験　エキスパート</li>
-                    <li>Javaプログラミング能力認定試験　3級</li>
-                    <li>珠算・電卓検定　ビジネス計算　1級</li>
-                </ul>
+                    
             </div>
         </section>
 
@@ -148,6 +104,10 @@
                         </p>
                     </div>
                 </div>
+        </section>
+
+        <!-- フォト -->
+        <section id="photo">
         </section>
 
         <!-- コンタクト -->
@@ -196,7 +156,11 @@
         <p>©　2018　Hime's Portfolio.</p>
     </footer>
 
-
+    <script>
+    $(".menu").click(function(){
+        $(this).parent().toggleClass("close");
+     });
+     </script>
 
 </body>
 </html>
