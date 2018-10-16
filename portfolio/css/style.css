@@ -163,11 +163,11 @@ body {
 }
 
 p,
+h1,
 h2,
 li,
 th,
 td {
-    color: #000;
     font-family: 'Schoolbell', cursive, "Sawarabi Mincho";
 }
 
@@ -190,7 +190,7 @@ h2 {
 
     /* ナビゲーション */
 
-    .icons{
+    .icons {
         display: none;
     }
 
@@ -245,46 +245,19 @@ h2 {
 
     }
 
-    /* プロフィール */
-    #profile {
-        position: relative;
-        margin-bottom: 500px;
+    .allsns {
+        display: flex;
+        margin: auto;
+        width: 700px;
     }
 
-    #profile h2 {
-        font-size: 55px;
-        margin: 100px 0 40px 280px;
+    .sns {
+        margin: 50px auto;
     }
 
-    #left1 img {
-        position: absolute;
-        margin-left: 300px;
-        margin-top: 20px;
-        border: 3.5px #ffd966 solid;
-    }
-
-    #right1 {
-        position: absolute;
-        margin-left: 680px;
-    }
-
-    #name1 {
-        font-size: 25px;
-        margin-bottom: -30px;
-    }
-
-    #name2 {
-        font-size: 35px;
-        margin-bottom: 5px;
-    }
-
-    pro {
-        text-align: center;
-    }
-
-    th,
-    td {
-        font-size: 25px;
+    .sns img{
+        width: 100px;
+        height: 100px;
     }
 
     /* ワーク */
@@ -354,102 +327,19 @@ h2 {
         font-size: 14.5px;
     }
 
-    /* コンタクト */
-    #contact {
-        position: relative;
-    }
-
-    #contact h2 {
-        font-size: 55px;
-        margin: 100px 0 10px 280px;
-    }
-
-    label {
-        font-size: 20px;
-    }
-
-    #Cname {
-        position: absolute;
-        margin-left: 350px;
-        font-family: 'Schoolbell', cursive;
-        color: #000;
-    }
-
-    #Cmail {
-        position: absolute;
-        margin-left: 200px;
-        margin-top: -44px;
-    }
-
-    #sub {
-        position: absolute;
-        width: 500px;
-        margin-left: 435px;
-        margin-top: -255px;
-    }
-
-    #sub p {
-        font-size: 17px;
-    }
-
-    #SNS {
-        margin-left: 520px;
-        margin-top: -55px;
-    }
 
     /* フッター */
 
     footer {
-        background-color: #ffd966;
+        background-color: #444444;
         width: 100%;
-        height: 200px;
-        margin-top: 400px;
-    }
-
-    #apple {
-        position: absolute;
-        margin: 20px 0 20px 650px;
-    }
-
-    footer ul {
-        list-style: none;
-        overflow: hidden;
-        position: absolute;
-        margin: 0 0 5px 405px;
-        margin-top: 100px;
-    }
-
-    footer ul li {
-        display: inline-block;
-        padding-left: 30px;
-    }
-
-    footer ul li a {
-        text-decoration: none;
-        font-family: 'Schoolbell', cursive;
-        font-size: 25px;
-        color: #ffffff;
+        height: 70px;
     }
 
     footer p {
-        position: absolute;
-        margin: 150px 0 0 590px;
+        text-align: center;
+        padding-top: 30px;
         font-size: 15px;
-    }
-
-    /* トップへ戻る */
-    #pagetop {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        display: none;
-    }
-
-    #topwarp {
-        position: fixed;
-        bottom: 30px;
-        right: 15px;
-        z-index: 999;
     }
 
 }
@@ -750,5 +640,18 @@ h2 {
         width: 300px;
         height: 300px;
         transition: width 1.25s cubic-bezier(0.5, 0, 0.05, 2), height 1.25s cubic-bezier(0.5, 0, 0.05, 2);
+    }
+
+    /* フッター */
+    footer {
+        background-color: #444444;
+        width: 100%;
+        height: 70px;
+    }
+
+    footer p {
+        text-align: center;
+        padding-top: 30px;
+        font-size: 15px;
     }
 }

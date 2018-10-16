@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<title>contact</title>
+<meta name="robots" content="noindex,nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/mailform.css" />
+<link rel="stylesheet" type="text/css" href="addon/confirm/confirm.css" />
+
+<!-- ご希望の日時選択ライブラリここから -->
+<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" />
+<!-- ご希望の日時選択ライブラリここまで -->
+</head>
+<body>
+
+	
+<body>
+		<!-- ヘッダー＆ナビゲーション -->
+		<header>
+			<h2>form</h2>
+			<nav>
+				<ul>
+					<li id="navi1"><a href="top.html">Top</a></li>
+					<li id="navi2"><a href="about.html">About</a></li>
+					<li id="navi3"><a href="photo.html">photo</a></li>
+				</ul>
+			</nav>
+			<!-- レスポンシブ―ナビ -->
+			<div class="base">
+				<div class="menu">
+					<div class="icon">
+						<div class="bar"></div>
+					</div>
+				</div>
+				<div class="icons">
+					<p class="fa fa-user" aria-hidden="true">top</p>
+					<p class="fa fa-tachometer" aria-hidden="true">about</p>
+					<p class="fa fa-calendar-o" aria-hidden="true">photo</p>
+				</div>
+				<div class="section">
+					<div class="cover1">
+						<div class="cover2">
+							<a class="section-static bottom" href="about.html"></a>
+						</div>
+					</div>
+				</div>
+				<a class="section-static top" href="top.html"></a>
+				<a class="content" href="photo.html"></a>
+			</div>
+			<!-- レスポンシブ―ナビ -->
+		</header>
+
+	<form action="php/mailform.php" method="post" id="mail_form">
+		<dl>
+			<dt>名前<span>Your Name</span></dt>
+			<dd class="required"><input type="text" id="name_1" name="name_1" value="" /> <input type="text" id="name_2" name="name_2" value="" /></dd>
+			
+			<dt>ふりがな<span>Name Reading</span></dt>
+			<dd><input type="text" id="read_1" name="read_1" value="" /> <input type="text" id="read_2" name="read_2" value="" /></dd>
+			
+			<dt>メールアドレス<span>Mail Address</span></dt>
+			<dd class="required"><input type="email" id="mail_address" name="mail_address" value="" /></dd>
+			
+			<dt>メールアドレス<br />(確認用)<span>Mail Address Confirm</span></dt>
+			<dd><input type="email" id="mail_address_confirm" name="mail_address_confirm" value="" /></dd>
+			
+			<dt>お問い合わせの内容<span>Mail Contents</span></dt>
+			<dd class="required"><textarea id="mail_contents" name="mail_contents" cols="40" rows="5"></textarea></dd>
+			
+			<dt>愛の告白<span>Message</span></dt>
+			<dd><textarea id="message" name="message" cols="40" rows="5"></textarea></dd>
+		</dl>
+		
+		<p id="form_submit"><input type="button" id="form_submit_button" value="送信する" /></p>
+	</form>
+	
+	<div id="confirm_field">
+		<h2>以下の内容で送信してよろしいですか？</h2>
+		<dl>
+		</dl>
+		<p id="confirm_submit"><input type="button" id="confirm_submit_button" value="送信する" /><input type="button" id="confirm_cancel_button" value="戻る" /></p>
+	</div>
+
+	
+	<footer>
+			<p>&copy;TanakaHimeko.</p>
+		</footer>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="js/mailform-js.php"></script>
+<script>
+		$(".menu").click(function(){
+			$(this).parent().toggleClass("close");
+		 });
+		 </script>
+
+<!-- アクセス解析 -->
+<script src="https://www.1-firststep.com/wp-content/themes/firststep-website/js/google.js"></script>
+<script src="https://www.1-firststep.com/wp-content/themes/firststep-website/cgi-bin/access_cgi/default.js"></script>
+</body>
+</html>
