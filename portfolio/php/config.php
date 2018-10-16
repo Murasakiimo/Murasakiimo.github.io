@@ -5,9 +5,9 @@
 
 
 //【必須】 自分のメールアドレスの設定 -- 複数のメールアドレスに送信したい場合は、以下の行をコピーして増やしていけばOKです。行頭の//を消せば有効となります。いくつでも追加可能。 --
-$rm_send_address[] = 'aaa@example.co.jp';
+// $rm_send_address[] = 'aaa@example.co.jp';
 //$rm_send_address[] = 'tanaka.himeko@gmail.com';
-//$rm_send_address[] = 'tanaka.himkeo@gmail.com';
+$rm_send_address[] = 'tanaka.himkeo@gmail.com';
 
 
 
@@ -82,8 +82,8 @@ $rm_thanks_body_signature = <<<EOM
 　　レスポンシブメールフォーム
 　　〒***-**** ここに住所など
 　　TEL : ***-***-****
-　　Web Site URL : https://www.1-firststep.com
-　　Blog URL : https://www.firstsync.net
+　　Web Site URL :
+　　Blog URL : 
 
 -----------------------------------------------------------------------------------
 
